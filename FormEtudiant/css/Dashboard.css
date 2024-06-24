@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #008033;
+    color: #ffffff;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem;
+}
+
+.menu li {
+    margin-bottom: 10px;
+    margin: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #0436db;
+    letter-spacing: 2px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.subjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.subject {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.subject h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.subject p {
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles pour la section Paramètres */
+.settings {
+   
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.settings h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.settings form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.settings label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.settings input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.settings button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #5cb85c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.settings button:hover {
+    background: #4cae4c;
+}
