@@ -13,8 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->id();
+        Schema::create('type_notes', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('libelle_typeNote');
+
+            // Parametres
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('type_notes');
     }
 };

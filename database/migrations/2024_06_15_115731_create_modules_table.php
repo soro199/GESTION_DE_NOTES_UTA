@@ -14,7 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('modules', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+             $table->string('libelleModule');
+                
+            // Parametres
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -14,7 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('niveaux', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('libelle_niveau');
+
+            // Parametres
+            $table->softDeletes();
             $table->timestamps();
         });
     }
