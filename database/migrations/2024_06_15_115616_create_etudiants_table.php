@@ -20,10 +20,14 @@ return new class extends Migration
 
             //foreign 
             $table->bigInteger('id_user')->unsigned();
+            $table->bigInteger('id_parent')->unsigned();
 
             //Liaision des tables
 
             $table->foreign('id_user')->references('id')->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+            $table->foreign('id_parent')->references('id')->on('parents')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
                 

@@ -29,6 +29,7 @@ class User extends Authenticatable
         'dateN',
         'tel',
         'id_role',
+        'adresse',
         'delete_at'
 
     ];
@@ -63,7 +64,7 @@ class User extends Authenticatable
         return $this->hasMany(Enseignant::class,'id_enseignant');
     }
     public function parents(){
-        return $this->hasMany(Parent::class,'id_parent');
+        return $this->hasMany(Parents::class,'id_parent');
     }
     public function etudiants(){
         return $this->hasMany(Etudiant::class,'id_etudiant');

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class parents extends Model
+class Parents extends Model
 {
     use HasFactory;
     protected $date=['delete_at'];
@@ -24,5 +24,9 @@ class parents extends Model
     public function user(){
 
         return $this->belongsTo(User::class,'id_user');
+    }
+
+    public function etudiants(){
+        return $this->hasMany(Etudiant::class,'id_etudiant');
     }
 }

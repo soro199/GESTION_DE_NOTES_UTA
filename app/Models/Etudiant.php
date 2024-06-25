@@ -14,6 +14,7 @@ class Etudiant extends Model
     protected $fillable = [
         'specialite',
         'id_user',
+        'id_parent',
         'delete_at'
 
 
@@ -25,6 +26,10 @@ class Etudiant extends Model
     public function user(){
 
         return $this->belongsTo(User::class,'id_user');
+    }
+    public function parent(){
+
+        return $this->belongsTo(Parents::class,'id_parent');
     }
     
 }
