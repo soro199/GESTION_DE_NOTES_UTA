@@ -17,10 +17,20 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    
+     protected $date=['delete_at'];
+     protected $table ='users';
+     public $timestamps= true;
     protected $fillable = [
         'name',
         'email',
         'password',
+        'prenoms',
+        'dateN',
+        'tel',
+        'id_role',
+        'delete_at'
+
     ];
 
     /**
@@ -41,4 +51,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+   
+
+    public function role(){
+
+        return $this->belongsTo(Role::class,'id_role');
+    }
+    
+    public function enseignants(){
+        return $this->hasMany(Enseignant::class,'id_enseignant');
+    }
+    public function parents(){
+        return $this->hasMany(Parent::class,'id_parent');
+    }
+    public function etudiants(){
+        return $this->hasMany(Etudiant::class,'id_etudiant');
+    }
+    public function administrations(){
+        return $this->hasMany(Administration::class,'id_administration');
+    }
 }
