@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: 'Tw Cen MT', sans-serif;
+}
+
+main {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(to left top, rgb(120, 235, 129), #05e261 65%);
+	overflow: hidden;
+}
+
+nav {
+	position: relative;
+	width: 85%;
+	height: 2vh;
+	margin: 20px auto;
+	display: flex;
+	align-items: center;
+	z-index: 1000;
+}
+
+nav .logo{
+	position: relative;
+	flex-basis: 20%;
+	cursor: pointer;
+	font-size: 2.5rem;
+	font-style: oblique;
+	font-weight: bold;
+	text-decoration: none;
+	color: #026b1c;
+	white-space: nowrap;
+	width: 750%;
+	height: 750%;
+
+}
+
+nav ul {
+	display: flex;
+	justify-content: flex-end;
+	flex: 1;
+	align-items: center;
+	padding-right: 40px;
+	text-align: right;
+	list-style-type: none;
+}
+
+ul li {
+	margin-right: 10px;
+}
+
+ul li a {
+	position: relative;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+	transition: width 1s, height 1s, background-color 1s;
+}
+ul li a:hover{
+	background-color: #fff;
+	border-radius: 7px 7px;
+	color: #026b1c;
+	transition: width 1s, height 1s, background-color 1s;
+}
+
+.info {
+	position: absolute;
+	top: 50%;
+	left: -10%;
+	width: 800px;
+	height: 800px;
+	transform: translateY(-50%);
+	z-index: 100;
+}
+
+.phone {
+	position: absolute;
+	z-index: 1;
+	width: 300px;
+	top: 50%;
+	left: calc(50% - 150px);
+	transform: translateY(-50%);
+}
+
+#circle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 800px;
+	height: 800px;
+	border-radius: 50%;
+	transform: rotate(0deg);
+	transition: 1s;
+}
+
+.feature {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	width: 200px;
+}
+
+.feature div {
+	margin-left: 20px;
+}
+
+.feature div h1 {
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+
+.feature p {
+	position: relative;
+	font-size: 70px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: #fff;
+	margin-right: 50px;
+	white-space: nowrap;
+	background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet); /* Define a gradient with multiple colors */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent */
+    display: inline
+}
+
+
+img {
+	width: 100%; /* Set the width to 100% of the container */
+    height: 100%; /* Set the height to 100% of the container */
+    object-fit: cover;
+}
+
+.feature img{
+	width: 100%; /* Set the width to 100% of the container */
+    height: 100%; /* Set the height to 100% of the container */
+    object-fit: cover;	
+}
+
+.camera {
+	display: flex;
+	top: 370px;
+	right: 50px;
+}
+
+.processor {
+	top: 120px;
+	left: 300px;
+	transform: rotate(-90deg);
+}
+
+.display {
+	bottom: 360px;
+	left: 50px;
+	transform: rotate(180deg);
+}
+
+.weight {
+	bottom: 130px;
+	left: 300px;
+	transform: rotate(-270deg);
+}
+
+.controls img {
+	width: 100%; /* Set the width to 100% of the container */
+    height: 100%; /* Set the height to 100% of the container */
+    object-fit: cover;
+}
+
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-top: 400px solid rgb(255, 255, 255);
+	border-bottom: 400px solid rgb(255, 255, 255);
+	border-left: 400px solid rgb(255, 255, 255);
+	border-right: 400px solid transparent;
+	z-index: 1;
+}

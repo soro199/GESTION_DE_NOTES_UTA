@@ -14,7 +14,20 @@ return new class extends Migration
     public function up()
     {
         Schema::create('parents', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+           
+
+            //foreign 
+            $table->bigInteger('id_user')->unsigned();
+
+            //Liaision des tables
+
+            $table->foreign('id_user')->references('id')->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
+            // Parametres
+            $table->softDeletes();
             $table->timestamps();
         });
     }
