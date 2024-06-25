@@ -16,6 +16,7 @@
         <br>
 
         <form action="" method="post">
+            <h2><i>Inscription</i></h2>
             Nom <br>
             <input type="text" name="x"><br>
             <br>

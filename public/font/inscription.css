@@ -6,13 +6,16 @@ body{
     color: white;
 
 }
+h2{
+    margin-left: 90px;
+}
 
 .Total{
     width: 370px;
-    height: 100px; 
+    height: 560px; 
     border: 2px solid;
     margin-left: 370px;
-    background-color:blue;
+    background-color:rgb(237, 75, 6);
     padding: 10px;
     border-radius: 15px;
 

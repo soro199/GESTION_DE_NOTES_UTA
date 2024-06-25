@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/yann',[AdminiController::class,'A'])->name('route.yann');
-Route::get('/franck',[AdminiController::class,'A'])->name('route.franck');
+Route::get('/franck',[AdminiController::class,'B'])->name('route.franck');
 
 
 require __DIR__.'/auth.php';
